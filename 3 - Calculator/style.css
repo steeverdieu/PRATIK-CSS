@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+/* Setup the css variables */
+:root {
+    --color-1: #303136;
+    --color-2: #29A8FF;
+    --color-3: #005DB2;
+    --color-4: #17181A;
+    --color-5: #818181;
+    --color-6: #616161;
+}
+
+/* Reset the default styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background-color: var(--color-2);
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+/* The calculator canvas */
+.calculator {
+    width: 375px;
+    padding-bottom: 24px;
+
+    border-radius: 39px;
+    background-color: var(--color-4);
+}
+
+/* The calculator screen section */
+.calculator-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    height: 330px;
+    padding: 18px;
+
+    color: white;
+}
+
+.calulator-calculus {
+    font-size: 24px;
+    font-weight: 300;
+
+    color: var(--color-5);
+}
+
+.calulator-calculus .highlight { color: var(--color-2); }
+
+.calculator-result {
+    font-size: 48px;
+    font-weight: 400;
+}
+
+/* The calculator (Include the buttons) */
+
+.calculator-body {
+    width: 308px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-group { display: flex; }
+
+.button-group-long { flex-direction: column; }
+
+.button-group-third { width: 246px; }
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 62px;
+    height: 62px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+
+    outline: none;
+    border: none;
+    border-radius: 16px;
+    background-color: var(--color-1);
+    color: var(--color-2);
+
+    font-size: 32px;
+    text-align: center;
+}
+
+.button-inactive {
+    font-size: 24px;
+    
+    background-color: var(--color-6);
+    color: #A5A5A5;
+}
+
+.button-function {
+    height: 40px;
+    border-radius: 24px;
+}
+
+.button-wide { width: 144px; }
+
+.button-long { height: 96px;}
+
+.button-group-long .button:first-child { margin-bottom: 26px; }
+
+.button-group > .button:last-child,
+.button-group-long .button { margin-right: 0;}
+
+.equal-button {
+    background-color: #1991FF;
+    color: #B2DAFF;
+}
+
+.df-button {
+    color: #339DFF;
+    background-color: var(--color-3);
+}
