@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+}
+
+.title {
+    font-style: italic;
+    font-weight: bold;
+    font-family: Roboto, sans-serif;
+    font-size: 5em;
+
+    color: rgb(34, 34, 34);
+
+    /* Apply the animation here */
+    animation: ANIMATION 3s linear infinite;
+}
+
+/* Key frames for animation */
+
+@keyframes ANIMATION {
+    0% {
+        color: rgb(34, 34, 34);
+    }
+
+    50% {
+        color: white;
+        text-shadow: 0 0 10px white;
+    
+        filter: drop-shadow(0 0 20px #2e65cc)
+        drop-shadow(0 0 30px #2e65cc)
+        drop-shadow(0 0 70px #2e65cc);
+    }
+    
+    100% {
+        color: rgb(34, 34, 34);
+    }
+}
