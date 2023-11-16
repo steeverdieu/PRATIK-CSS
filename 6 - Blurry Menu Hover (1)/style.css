@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+    font-size: 16px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-family: Roboto, sans-serif;
+    font-size: 1.2em;
+    list-style: none;
+
+    color: white;
+}
+
+.menu-item {
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .8s;
+}
+
+.menu-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+    background-color: #f1c40f;
+    z-index: -1;
+    transition: .8s;
+}
+
+/* Blur the items of the menu */
+.menu:hover .menu-item {
+    text-shadow: 0 0 10px white;
+    color: transparent;
+}
+
+/* Show the background of the hover item */
+.menu:hover .menu-item:hover::before {
+    left: 0;
+}
+/* Delete the blur on the hover item */
+.menu:hover .menu-item:hover {
+    text-shadow: unset;
+    color: white;
+    font-weight: bold;
+}
