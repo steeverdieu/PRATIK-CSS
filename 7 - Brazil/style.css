@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+
+    /* Add transition to the body */
+    transition: .5s;
+    /* Delay the color change of the background */
+    transition-delay: .4s;
+}
+
+.title {
+    position: relative;
+    font-family: 'Vina Sans', sans-serif;
+    font-size: 10em;
+    text-transform: uppercase;
+
+    color: #27ae60;
+    cursor: pointer;
+}
+
+.title::before {
+    content: "Brazil";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+
+    /* Hide the Brazil in Yellow */
+    overflow: hidden;
+
+    color: #f1c40f;
+    transition: .5s;
+}
+
+.title:hover {
+    text-shadow: 0 0px 25px rgba(0, 0, 0, .2);
+}
+
+.title:hover::before {
+    /* Show the Brazil in Yellow */
+    width: 100%;
+}
+
+/* Change the background of the body */
+/* When the title is Hover */
+body:has(.title:hover) {
+    background-color: #27ae60;
+}
