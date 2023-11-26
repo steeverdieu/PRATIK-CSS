@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    animation: slide 15s infinite ease-in;
+}
+
+.slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    font-family: 'Vina Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 20em;
+
+    background-color: #00cec9;
+}
+
+.slider-2 {
+    left: 100%;
+    background-color: #00a8ff;
+}
+
+.slider-3 {
+    left: 200%;
+    background-color: #fdcb6e;
+}
+
+.slider-4 {
+    left: 300%;
+    background-color: #ff7675;
+}
+
+.slider-5 {
+    left: 400%;
+    background-color: #6c5ce7;
+}
+
+@keyframes slide {
+    0%, 15% { transform: translateX(0); }
+    20%, 35% { transform: translateX(-100%); }
+    40%, 55% { transform: translateX(-200%); }
+    60%, 75% { transform: translateX(-300%); }
+    80%, 95% { transform: translateX(-400%); }
+}
