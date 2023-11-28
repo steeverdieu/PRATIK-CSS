@@ -31,11 +31,6 @@ body {
 }
 
 .title {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     font-family: 'Vina Sans', sans-serif;
     font-size: 30em;
     text-transform: uppercase;
