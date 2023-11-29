@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap');
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: .5s;
+}
+
+.box:hover {
+    transform: scale(1.2);
+    background-color: white;
+}
+
+/** Add this effect when the mouse is on the picture */
+.box:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 20px solid transparent;
+    border-top-color: red;
+    border-radius: 50%;
+
+    transition: .5s;
+    animation: rotate 1s ease-in-out infinite;
+}
+
+.box .image {
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.box .image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+@keyframes rotate {
+    to { transform: rotate(360deg); }
+}
