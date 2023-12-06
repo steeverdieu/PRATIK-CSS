@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #636e72;
+    width: 100%;
+    height: 100vh;
+}
+
+.pictures {
+    position: relative;
+    width: 60%;
+    height: 60%;
+
+    cursor: pointer;
+}
+
+.pictures .img-1,
+.pictures .img-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    transition: .5s;
+}
+
+.pictures .img-1 img,
+.pictures .img-2 img {
+    width: 100%;
+    transition: .8s ease-in;
+}
+
+.pictures .img-1 {
+    z-index: 3;
+    height: 0;
+    border-bottom: 3px solid white;
+}
+
+.pictures .img-2 {
+    filter: brightness(0.5) saturate(0%);
+}
+
+.pictures:hover .img-1 {
+    height: 100%;
+}
