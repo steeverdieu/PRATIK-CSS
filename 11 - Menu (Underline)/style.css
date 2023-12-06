@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #636e72;
+    height: 100vh;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    
+    width: 1000px;
+    background-color: #a29bfe;
+    border-bottom: 3px solid #6c5ce7;
+}
+
+.menu-item {
+    width: 20%;
+    padding: 25px 10px;
+    
+    color: white;
+
+    list-style: none;
+    text-align: center;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.line {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 20%;
+    height: 5px;
+
+    border-radius: 290px;
+    
+    transition: .5s;
+}
+
+.line::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    width: 80%;
+    height: 5px;
+
+    background-color: white;
+    border-radius: 290px;
+    
+    transition: .5s;
+}
+
+.menu-item:nth-child(1):hover ~ .line{ left: 0; }
+.menu-item:nth-child(2):hover ~ .line{ left: 20%; }
+.menu-item:nth-child(3):hover ~ .line{ left: 40%; }
+.menu-item:nth-child(4):hover ~ .line{ left: 60%; }
+.menu-item:nth-child(5):hover ~ .line{ left: 80%; }
