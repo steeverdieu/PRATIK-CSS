@@ -28,6 +28,7 @@ body {
     width: 1000px;
     background-color: #a29bfe;
     border-bottom: 3px solid #6c5ce7;
+    border-radius: 296px;
 }
 
 .menu-item {
@@ -40,34 +41,42 @@ body {
     text-align: center;
     font-size: 1.5em;
     cursor: pointer;
+    z-index: 2;
+    transition: .5s;
 }
 
 .line {
+    display: none;
     content: '';
     position: absolute;
     left: 0;
     bottom: 0;
 
     width: 20%;
-    height: 5px;
-
-    border-radius: 290px;
+    height: 100%;
     
-    transition: .5s;
+    z-index: 1;
 }
 
 .line::before {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
 
     width: 80%;
-    height: 5px;
+    height: 60%;
 
     background-color: white;
     border-radius: 290px;
+}
+
+.menu-item:hover { color: black; }
+.menu-item:hover ~ .line{
+    display: block;
+    opacity: 1;
+    transition: .5s;
 }
 
 .menu-item:nth-child(1):hover ~ .line{ left: 0; }
