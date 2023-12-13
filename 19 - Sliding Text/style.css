@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans&family=Roboto:wght@100;300;400&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: black;
+    font-family: Roboto;
+}
+
+.bio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.iam { font-size: 1.2em; }
+
+.titles {
+    overflow: hidden;
+    height: 40px;
+}
+
+.titles div {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 40px;
+    animation: move 5s infinite ease-in-out;
+}
+
+.titles div span {
+    display: block;
+}
+
+@keyframes move {
+    20% { margin-top: 0 }
+    25%, 45% { margin-top: -40px  }
+    50%, 70% { margin-top: -80px  }
+    75%, 95% { margin-top: -40px  }
+    100% { margin-top: 0px  }
+}
