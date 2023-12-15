@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans&family=Roboto:wght@100;300;400&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+    font-family: Roboto;
+}
+
+.circle,
+.circle::before,
+.circle::after {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 3px solid white;
+    border-radius: 47% 53% 35% 65% / 31% 30% 70% 69%;
+    animation: animCircles 6s linear infinite;
+}
+
+.circle::before,
+.circle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 60% 40% 35% 65% / 61% 58% 42% 39%;
+    border-color: #6c5ce7;
+    animation-duration: 2s;
+}
+
+.circle::after {
+    border-radius: 63% 37% 52% 48% / 29% 56% 44% 71%;
+    border-color: #ff7675;
+    animation-duration: 8s;
+}
+
+@keyframes animCircles {
+    to { transform: rotate(360deg); }
+}
