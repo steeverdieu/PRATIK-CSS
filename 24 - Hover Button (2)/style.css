@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans&family=Roboto:wght@100;300;400&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+    font-family: Roboto;
+}
+
+.button {
+    position: relative;
+    width: 150px;
+    height: 60px;
+    overflow: hidden;
+
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.button::after {
+    content: 'Click me !!';
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+
+    font-size: 1em;
+    line-height: 60px;
+
+    transition: .2s;
+}
+
+.button:hover::after { top: 0; }
+
+.button:active { transform: scale(.9); }
