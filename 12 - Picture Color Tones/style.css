@@ -19,8 +19,8 @@ body {
 
 .pictures {
     position: relative;
-    width: 60%;
-    height: 60%;
+    width: 800px;
+    height: 800px;
 
     cursor: pointer;
 }
