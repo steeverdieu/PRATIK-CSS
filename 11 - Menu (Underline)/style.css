@@ -44,15 +44,12 @@ body {
 }
 
 .line {
-    content: '';
     position: absolute;
     left: 0;
     bottom: 0;
 
     width: 20%;
     height: 5px;
-
-    border-radius: 290px;
     
     transition: .5s;
 }
