@@ -98,13 +98,15 @@ body {
 }
 
 .form-input:focus ~ .form-label ,
-.form-input:valid ~ .form-label {
+.form-input:valid ~ .form-label,
+.form-input:user-invalid ~ .form-label {
     transform: translateY(-50px);
     font-size: 1em;
 }
 
 .form-input:focus ~ i,
-.form-input:valid ~ i {
+.form-input:valid ~ i,
+.form-input:user-invalid ~ i {
     height: 63px;
     padding: 20px 10px;
 
